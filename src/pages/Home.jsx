@@ -223,7 +223,7 @@ const MarqueeSlider = ({ items }) => {
                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
               </svg>
             </div>
-            <span className="text-gray-700 font-semibold text-lg">{item}</span>
+            <span className="text-gray-700 font-semibold text-lg whitespace-nowrap">{item}</span>
           </div>
         ))}
       </div>
@@ -263,7 +263,7 @@ const AnimatedCounter = ({ end, suffix = '', duration = 2000 }) => {
   }, [end, duration]);
 
   return (
-    <span ref={counterRef} className="text-4xl md:text-5xl font-bold text-blue-600">
+    <span ref={counterRef} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600">
       {count}{suffix}
     </span>
   );
@@ -296,254 +296,188 @@ export default function Home() {
   const filteredProjects = activeTab === 'all' ? projects : projects.filter(p => p.category.toLowerCase() === activeTab);
 
   return (
-    <>
-
-
-
+    <div className="overflow-x-hidden">
       {/* ========== HERO SECTION with Particles & Tech Background ========== */}
-<section className="relative min-h-screen flex items-center overflow-hidden">
-  {/* Background Tech Image */}
-  <div className="absolute inset-0 z-0">
-    <img 
-      src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop" 
-      alt="Tech Background" 
-      className="w-full h-full object-cover"
-    />
-    {/* Dark Overlay for better text readability */}
-    <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-indigo-900/95"></div>
-    {/* Tech pattern overlay */}
-    <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-  </div>
-  
-  {/* Particle Field */}
-  <ParticleField />
-  
-  {/* Animated gradient orbs */}
-  <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse"></div>
-  <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse delay-1000"></div>
-  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-500"></div>
-  <div className="absolute top-40 right-1/4 w-64 h-64 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-700"></div>
-  
-  {/* Grid overlay for tech feel */}
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
-  
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24">
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
-      {/* Left Content */}
-      <div className="text-center lg:text-left">
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6 animate-fade-in">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-          </span>
-
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Tech Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop" 
+            alt="Tech Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-indigo-900/95"></div>
+          <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         </div>
         
-        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-5 animate-fade-in-up break-words">
-          Comprehensive
-          <br />
-          <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            IT Solutions For A
-          </span>
-          <br />
-          Digital World
-        </h1>
+        <ParticleField />
         
-        <p className="text-base md:text-lg text-blue-100 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
-          We deliver cutting-edge technology solutions that drive business growth, 
-          streamline operations, and create lasting digital impact across Africa.
-        </p>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-500"></div>
+        <div className="absolute top-40 right-1/4 w-64 h-64 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-700"></div>
         
-        <div className="flex flex-wrap justify-center lg:justify-start gap-4 animate-fade-in-up animation-delay-300">
-          <Link
-            to="/contact"
-            className="group px-6 py-3 md:px-8 md:py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2 text-sm md:text-base"
-          >
-            <span>Discover More</span>
-            <svg className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
-          <Link
-            to="/services"
-            className="px-6 py-3 md:px-8 md:py-3.5 bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 text-sm md:text-base"
-          >
-            Our Services
-          </Link>
-        </div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
         
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12 md:mt-16 pt-6 md:pt-8 border-t border-white/10 animate-fade-in-up animation-delay-400">
-          <div className="text-center">
-            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">50+</div>
-            <div className="text-xs md:text-sm text-blue-200 mt-1">Projects Completed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">30+</div>
-            <div className="text-xs md:text-sm text-blue-200 mt-1">Happy Clients</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">5+</div>
-            <div className="text-xs md:text-sm text-blue-200 mt-1">Years Experience</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">24/7</div>
-            <div className="text-xs md:text-sm text-blue-200 mt-1">Support Available</div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Right Side - Image with Wobbly/Blob Shapes */}
-      <div className="hidden lg:block relative animate-fade-in-up animation-delay-300">
-        {/* Main blob container */}
-        <div className="relative flex items-center justify-center">
-          
-          {/* Blob shape 1 - Large background blob (blue) */}
-          <div className="absolute w-[500px] h-[500px] bg-blue-500/20 rounded-full filter blur-3xl animate-blob"></div>
-          
-          {/* Blob shape 2 - Medium blob (purple) */}
-          <div className="absolute w-[400px] h-[400px] bg-purple-500/20 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
-          
-          {/* Blob shape 3 - Small blob (cyan) */}
-          <div className="absolute w-[300px] h-[300px] bg-cyan-500/20 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
-          
-          {/* Wobbly shape outline around image */}
-          <svg className="absolute w-[520px] h-[520px] -z-10 animate-spin-slow" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-            <path 
-              d="M250 30 C350 30 450 100 470 220 C490 340 420 450 310 470 C200 490 80 450 40 340 C0 230 50 100 150 50 C200 20 230 30 250 30Z" 
-              fill="none" 
-              stroke="url(#gradientBlob)" 
-              strokeWidth="3"
-              className="opacity-60"
-            />
-            <defs>
-              <linearGradient id="gradientBlob" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3b82f6" />
-                <stop offset="50%" stopColor="#8b5cf6" />
-                <stop offset="100%" stopColor="#06b6d4" />
-              </linearGradient>
-            </defs>
-          </svg>
-          
-          {/* Second wobbly shape - dashed */}
-          <svg className="absolute w-[560px] h-[560px] -z-10 animate-spin-reverse-slow" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-            <path 
-              d="M250 20 C370 20 480 110 490 250 C500 390 380 480 250 480 C120 480 10 390 20 250 C30 110 130 20 250 20Z" 
-              fill="none" 
-              stroke="url(#gradientBlob2)" 
-              strokeWidth="2"
-              strokeDasharray="8 8"
-              className="opacity-40"
-            />
-            <defs>
-              <linearGradient id="gradientBlob2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#60a5fa" />
-                <stop offset="100%" stopColor="#c084fc" />
-              </linearGradient>
-            </defs>
-          </svg>
-          
-          {/* Floating geometric shapes around the image */}
-          <div className="absolute -top-10 -right-10 w-16 h-16 bg-blue-500/30 rounded-2xl backdrop-blur-sm border border-blue-400/30 rotate-12"></div>
-          <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-purple-500/30 rounded-full backdrop-blur-sm border border-purple-400/30"></div>
-          <div className="absolute top-20 -right-6 w-8 h-8 bg-cyan-500/30 rounded-lg backdrop-blur-sm border border-cyan-400/30 rotate-45"></div>
-          <div className="absolute bottom-20 -left-6 w-10 h-10 bg-indigo-500/30 rounded-xl backdrop-blur-sm border border-indigo-400/30 -rotate-12"></div>
-          <div className="absolute top-1/2 -right-12 w-6 h-6 bg-green-500/30 rounded-full backdrop-blur-sm border border-green-400/30"></div>
-          <div className="absolute top-1/3 -left-10 w-7 h-7 bg-yellow-500/30 rounded-lg backdrop-blur-sm border border-yellow-400/30 rotate-12"></div>
-          
-          {/* The actual image container with rounded corners */}
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105 z-10">
-            {/* REPLACE THIS URL WITH YOUR UNSPLASH IMAGE */}
-            <img 
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=500&fit=crop" 
-              alt="IT Team working together" 
-              className="w-full h-auto object-cover"
-            />
-            {/* Subtle gradient overlay for better integration */}
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6 animate-fade-in">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span className="text-white/90 text-xs sm:text-sm font-medium tracking-wide">Reliable IT. Real-Time Results.</span>
+              </div>
+              
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-4 sm:mb-5 animate-fade-in-up break-words">
+                Comprehensive
+                <br />
+                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block">
+                  IT Solutions For A
+                </span>
+                <br />
+                Digital World
+              </h1>
+              
+              <p className="text-sm sm:text-base md:text-lg text-blue-100 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-6 sm:mb-8 animate-fade-in-up animation-delay-200">
+                We deliver cutting-edge technology solutions that drive business growth, 
+                streamline operations, and create lasting digital impact across Africa.
+              </p>
+              
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 animate-fade-in-up animation-delay-300">
+                <Link
+                  to="/contact"
+                  className="group px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2 text-xs sm:text-sm md:text-base"
+                >
+                  <span>Discover More</span>
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+                <Link
+                  to="/services"
+                  className="px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 text-xs sm:text-sm md:text-base"
+                >
+                  Our Services
+                </Link>
+              </div>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mt-10 sm:mt-12 md:mt-16 pt-6 md:pt-8 border-t border-white/10 animate-fade-in-up animation-delay-400">
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">50+</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-blue-200 mt-1">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">30+</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-blue-200 mt-1">Happy Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">5+</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-blue-200 mt-1">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">24/7</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-blue-200 mt-1">Support Available</div>
+                </div>
+              </div>
+            </div>
             
-            {/* Glow effect on hover */}
-            <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
+            {/* Right Side - Image with Wobbly/Blob Shapes (Hidden on mobile) */}
+            <div className="hidden lg:block relative animate-fade-in-up animation-delay-300">
+              <div className="relative flex items-center justify-center">
+                <div className="absolute w-[500px] h-[500px] bg-blue-500/20 rounded-full filter blur-3xl animate-blob"></div>
+                <div className="absolute w-[400px] h-[400px] bg-purple-500/20 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+                <div className="absolute w-[300px] h-[300px] bg-cyan-500/20 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
+                
+                <svg className="absolute w-[520px] h-[520px] -z-10 animate-spin-slow" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M250 30 C350 30 450 100 470 220 C490 340 420 450 310 470 C200 490 80 450 40 340 C0 230 50 100 150 50 C200 20 230 30 250 30Z" fill="none" stroke="url(#gradientBlob)" strokeWidth="3" className="opacity-60"/>
+                  <defs>
+                    <linearGradient id="gradientBlob" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="50%" stopColor="#8b5cf6" />
+                      <stop offset="100%" stopColor="#06b6d4" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                
+                <svg className="absolute w-[560px] h-[560px] -z-10 animate-spin-reverse-slow" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M250 20 C370 20 480 110 490 250 C500 390 380 480 250 480 C120 480 10 390 20 250 C30 110 130 20 250 20Z" fill="none" stroke="url(#gradientBlob2)" strokeWidth="2" strokeDasharray="8 8" className="opacity-40"/>
+                  <defs>
+                    <linearGradient id="gradientBlob2" x1="100%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#60a5fa" />
+                      <stop offset="100%" stopColor="#c084fc" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105 z-10">
+                  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=500&fit=crop" alt="IT Team working together" className="w-full h-auto object-cover"/>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
+                  <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          {/* Small decorative dots around */}
-          <div className="absolute -top-4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-          <div className="absolute -bottom-4 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-500"></div>
-          <div className="absolute top-1/2 -right-8 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute top-1/3 -left-8 w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse delay-700"></div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-  {/* Scroll indicator */}
-  
-</section>
-
-
-
-
-
-      
+      </section>
 
       {/* ========== MARQUEE SLIDER ========== */}
       <MarqueeSlider items={marqueeItems} />
 
       {/* ========== ABOUT SECTION ========== */}
-      <section className="py-24 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
             <div className="relative reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=500&fit=crop" 
-                  alt="About TIZAK" 
-                  className="w-full h-auto"
-                />
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=500&fit=crop" alt="About TIZAK" className="w-full h-auto"/>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 rounded-xl shadow-xl p-6 text-center">
-                <div className="text-4xl font-bold text-white">5+</div>
-                <div className="text-blue-200 text-sm">Years of Excellence</div>
+              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-blue-600 rounded-xl shadow-xl p-4 sm:p-6 text-center">
+                <div className="text-2xl sm:text-4xl font-bold text-white">5+</div>
+                <div className="text-blue-200 text-[10px] sm:text-sm">Years of Excellence</div>
               </div>
             </div>
             <div className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
-              <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4">About Us</span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full inline-block mb-4">About Us</span>
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 break-words">
                 Empowering Businesses Through Smart IT Solutions
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">
                 TIZAK Software Solutions is a technology company focused on developing, designing, producing, 
                 licensing, and selling software applications and digital platforms. We provide comprehensive 
                 IT services including software development, website development, mobile applications, 
                 system integration, IT consulting, and digital marketing.
               </p>
-              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Innovation at our core</h4>
-                    <p className="text-sm text-gray-500">Cutting-edge solutions for modern challenges</p>
+                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Innovation at our core</h4>
+                    <p className="text-xs sm:text-sm text-gray-500">Cutting-edge solutions for modern challenges</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">24/7 Technical Support</h4>
-                    <p className="text-sm text-gray-500">Round-the-clock assistance for your business</p>
+                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">24/7 Technical Support</h4>
+                    <p className="text-xs sm:text-sm text-gray-500">Round-the-clock assistance for your business</p>
                   </div>
                 </div>
               </div>
-              <Link to="/about" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
+              <Link to="/about" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all text-sm sm:text-base">
                 Learn More About Us
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -553,33 +487,29 @@ export default function Home() {
       </section>
 
       {/* ========== SERVICES SECTION ========== */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px] opacity-30"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full">What We Offer</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
+          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">What We Offer</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
               Explore Our Services
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
               We offer end-to-end technology solutions tailored to your business needs
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
-              <div 
-                key={service.title} 
-                className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
+              <div key={service.title} className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 100}ms` }}>
                 <ServiceCard {...service} />
               </div>
             ))}
           </div>
-          <div className="text-center mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <Link to="/services" className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-md hover:shadow-lg">
+          <div className="text-center mt-10 sm:mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <Link to="/services" className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-md hover:shadow-lg text-sm sm:text-base">
               Explore All Services
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -588,25 +518,25 @@ export default function Home() {
       </section>
 
       {/* ========== PROJECTS SECTION ========== */}
-      <section className="py-24 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full">Work Showcase</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
+          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">Work Showcase</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
               Featured Projects
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
               Discover some of our successful projects that have made an impact
             </p>
           </div>
           
           {/* Project Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
             {['all', 'web application', 'enterprise', 'platform', 'iot solution', 'business'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2 rounded-full font-medium transition-all ${
+                className={`px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-full font-medium transition-all text-xs sm:text-sm ${
                   activeTab === tab
                     ? 'bg-blue-600 text-white shadow-md'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -617,21 +547,17 @@ export default function Home() {
             ))}
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredProjects.map((project, index) => (
-              <div 
-                key={project.title} 
-                className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
+              <div key={project.title} className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 100}ms` }}>
                 <ProjectCard {...project} />
               </div>
             ))}
           </div>
-          <div className="text-center mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300">
+          <div className="text-center mt-10 sm:mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <Link to="/projects" className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 text-sm sm:text-base">
               View All Projects
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
@@ -640,83 +566,80 @@ export default function Home() {
       </section>
 
       {/* ========== WHY CHOOSE US SECTION ========== */}
-      <section className="py-24 bg-gradient-to-br from-blue-900 to-indigo-900 text-white relative overflow-hidden">
+      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-blue-900 to-indigo-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&h=800&fit=crop')] bg-cover bg-center opacity-10"></div>
-        <div className="absolute top-20 right-10 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-indigo-500 rounded-full filter blur-3xl opacity-20"></div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-300 font-semibold text-sm uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full">Why Choose Us</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4">
+          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="text-blue-300 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-white/10 px-3 sm:px-4 py-1.5 rounded-full">Why Choose Us</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 break-words">
               Why TIZAK Is Your Perfect Partner
             </h2>
-            <p className="text-blue-100 max-w-2xl mx-auto mt-4">
+            <p className="text-blue-100 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
               We combine technical expertise with business understanding to deliver exceptional results
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
-              <div className="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Expertise You Can Trust</h3>
-              <p className="text-blue-100">With years of experience in the IT industry, our certified professionals bring deep knowledge and proven solutions.</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Expertise You Can Trust</h3>
+              <p className="text-blue-100 text-sm sm:text-base">With years of experience in the IT industry, our certified professionals bring deep knowledge and proven solutions.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
-              <div className="w-20 h-20 bg-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Customized Solutions</h3>
-              <p className="text-blue-100">We tailor every solution to your specific business needs, ensuring maximum ROI and efficiency.</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Customized Solutions</h3>
+              <p className="text-blue-100 text-sm sm:text-base">We tailor every solution to your specific business needs, ensuring maximum ROI and efficiency.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300">
-              <div className="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">End-to-End Support</h3>
-              <p className="text-blue-100">From initial consultation to deployment and maintenance, we're with you every step of the way.</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">End-to-End Support</h3>
+              <p className="text-blue-100 text-sm sm:text-base">From initial consultation to deployment and maintenance, we're with you every step of the way.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ========== TEAM SECTION ========== */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full">Our Team</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
+          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">Our Team</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
               Meet Our Experts
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
               Our team of dedicated professionals is ready to bring your vision to life
             </p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {teamMembers.map((member, index) => (
               <div key={member.name} className="text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 100}ms` }}>
                 <div className="rounded-2xl overflow-hidden mb-4 shadow-lg">
-                  <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
+                  <img src={member.image} alt={member.name} className="w-full h-56 sm:h-64 object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                <p className="text-blue-600 mb-3">{member.role}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900">{member.name}</h3>
+                <p className="text-blue-600 mb-3 text-sm sm:text-base">{member.role}</p>
                 <div className="flex justify-center gap-3">
-                  <a href={member.social.linkedin} className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <a href={member.social.linkedin} className="w-7 h-7 sm:w-8 sm:h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                   </a>
-                  <a href={member.social.twitter} className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <a href={member.social.twitter} className="w-7 h-7 sm:w-8 sm:h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0021.683-11.777c0-.21-.005-.418-.014-.628A9.97 9.97 0 0024 4.59z"/>
                     </svg>
                   </a>
@@ -728,34 +651,34 @@ export default function Home() {
       </section>
 
       {/* ========== TESTIMONIALS SECTION ========== */}
-      <section className="py-24 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full">Testimonials</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
+          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">Testimonials</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
               What Our Clients Say
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
               Real feedback from real clients who trust us with their digital transformation
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={testimonial.name} className="bg-gray-50 rounded-2xl p-8 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 150}ms` }}>
+              <div key={testimonial.name} className="bg-gray-50 rounded-2xl p-6 sm:p-8 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 150}ms` }}>
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
                       <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">"{testimonial.text}"</p>
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">"{testimonial.text}"</p>
                 <div className="flex items-center gap-4">
-                  <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
+                  <img src={testimonial.image} alt={testimonial.name} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                    <h4 className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.name}</h4>
+                    <p className="text-xs sm:text-sm text-gray-500">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
@@ -765,71 +688,71 @@ export default function Home() {
       </section>
 
       {/* ========== PRICING SECTION ========== */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full">Pricing Plan</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
+          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">Pricing Plan</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
               Choose Your Perfect Package
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
               Flexible pricing options tailored to your business needs
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {/* Basic Plan */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
-              <div className="p-8 text-center border-b">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Basic Package</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-2">$35<span className="text-base font-normal text-gray-500">/month</span></div>
-                <p className="text-gray-500">Perfect for startups</p>
+              <div className="p-6 sm:p-8 text-center border-b">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Basic Package</h3>
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">$35<span className="text-sm sm:text-base font-normal text-gray-500">/month</span></div>
+                <p className="text-gray-500 text-sm sm:text-base">Perfect for startups</p>
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Community Support</span></li>
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Dedicated Tech Experts</span></li>
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Unlimited Storage</span></li>
-                  <li className="flex items-center gap-2 opacity-50"><svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"/></svg><span>Custom Domains</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Community Support</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Dedicated Tech Experts</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Unlimited Storage</span></li>
+                  <li className="flex items-center gap-2 opacity-50 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"/></svg><span>Custom Domains</span></li>
                 </ul>
-                <Link to="/contact" className="block w-full text-center py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Get Started</Link>
+                <Link to="/contact" className="block w-full text-center py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all text-sm sm:text-base">Get Started</Link>
               </div>
             </div>
             
             {/* Standard Plan - Featured */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform scale-105 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 border-2 border-blue-600">
-              <div className="bg-blue-600 text-white text-center py-2 text-sm font-semibold">MOST POPULAR</div>
-              <div className="p-8 text-center border-b">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Standard Package</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-2">$55<span className="text-base font-normal text-gray-500">/month</span></div>
-                <p className="text-gray-500">Best for growing businesses</p>
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform scale-100 md:scale-105 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 border-2 border-blue-600">
+              <div className="bg-blue-600 text-white text-center py-2 text-xs sm:text-sm font-semibold">MOST POPULAR</div>
+              <div className="p-6 sm:p-8 text-center border-b">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Standard Package</h3>
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">$55<span className="text-sm sm:text-base font-normal text-gray-500">/month</span></div>
+                <p className="text-gray-500 text-sm sm:text-base">Best for growing businesses</p>
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Priority Support</span></li>
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Dedicated Account Manager</span></li>
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Unlimited Storage</span></li>
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Custom Domains</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Priority Support</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Dedicated Account Manager</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Unlimited Storage</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Custom Domains</span></li>
                 </ul>
-                <Link to="/contact" className="block w-full text-center py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-md">Get Started</Link>
+                <Link to="/contact" className="block w-full text-center py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-md text-sm sm:text-base">Get Started</Link>
               </div>
             </div>
             
             {/* Premium Plan */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300">
-              <div className="p-8 text-center border-b">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Premium Package</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-2">$99<span className="text-base font-normal text-gray-500">/year</span></div>
-                <p className="text-gray-500">For enterprises</p>
+              <div className="p-6 sm:p-8 text-center border-b">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Premium Package</h3>
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">$99<span className="text-sm sm:text-base font-normal text-gray-500">/year</span></div>
+                <p className="text-gray-500 text-sm sm:text-base">For enterprises</p>
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>24/7 Premium Support</span></li>
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Enterprise Security</span></li>
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Custom Development</span></li>
-                  <li className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>SLA Guarantee</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>24/7 Premium Support</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Enterprise Security</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Custom Development</span></li>
+                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>SLA Guarantee</span></li>
                 </ul>
-                <Link to="/contact" className="block w-full text-center py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Get Started</Link>
+                <Link to="/contact" className="block w-full text-center py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all text-sm sm:text-base">Get Started</Link>
               </div>
             </div>
           </div>
@@ -837,14 +760,14 @@ export default function Home() {
       </section>
 
       {/* ========== FAQ SECTION ========== */}
-      <section className="py-24 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full">FAQ</span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mt-4">
+          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">FAQ</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-4 break-words">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
               Find answers to common questions about our services
             </p>
           </div>
@@ -859,15 +782,15 @@ export default function Home() {
               <div key={index} className="border border-gray-200 rounded-xl overflow-hidden reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 100}ms` }}>
                 <button
                   onClick={() => setActiveFaq(activeFaq === index ? -1 : index)}
-                  className="w-full flex justify-between items-center p-6 text-left bg-gray-50 hover:bg-gray-100 transition-colors"
+                  className="w-full flex justify-between items-center p-4 sm:p-6 text-left bg-gray-50 hover:bg-gray-100 transition-colors"
                 >
-                  <span className="font-semibold text-gray-900">{faq.q}</span>
-                  <svg className={`w-5 h-5 text-gray-500 transition-transform ${activeFaq === index ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="font-semibold text-gray-900 text-sm sm:text-base">{faq.q}</span>
+                  <svg className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-500 transition-transform ${activeFaq === index ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className={`transition-all duration-300 overflow-hidden ${activeFaq === index ? 'max-h-48 p-6' : 'max-h-0'}`}>
-                  <p className="text-gray-600">{faq.a}</p>
+                <div className={`transition-all duration-300 overflow-hidden ${activeFaq === index ? 'max-h-48 p-4 sm:p-6' : 'max-h-0'}`}>
+                  <p className="text-gray-600 text-sm sm:text-base">{faq.a}</p>
                 </div>
               </div>
             ))}
@@ -876,29 +799,29 @@ export default function Home() {
       </section>
 
       {/* ========== BLOG SECTION ========== */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full">Blog & Articles</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
+          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">Blog & Articles</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
               Latest News & Insights
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
               Stay updated with the latest trends in technology
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {blogPosts.map((post, index) => (
               <div key={post.title} className="bg-white rounded-2xl overflow-hidden shadow-lg reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 150}ms` }}>
                 <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h3>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  <Link to="/blog" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all">
+                <div className="p-4 sm:p-6">
+                  <p className="text-xs sm:text-sm text-gray-500 mb-2">{post.date}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2">{post.title}</h3>
+                  <p className="text-gray-600 mb-4 text-sm sm:text-base line-clamp-3">{post.excerpt}</p>
+                  <Link to="/blog" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all text-sm sm:text-base">
                     Read More
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -910,38 +833,38 @@ export default function Home() {
       </section>
 
       {/* ========== BRANDS / PARTNERS SECTION ========== */}
-      <section className="py-16 bg-white border-y border-gray-100">
+      <section className="py-12 sm:py-16 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <h2 className="font-display text-2xl font-semibold text-gray-400">Trusted by Industry Leaders</h2>
+          <div className="text-center mb-8 sm:mb-10 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <h2 className="font-display text-xl sm:text-2xl font-semibold text-gray-400">Trusted by Industry Leaders</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 items-center justify-items-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
             {brandLogos.map((logo, index) => (
-              <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
             ))}
           </div>
         </div>
       </section>
 
       {/* ========== CTA SECTION ========== */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 relative overflow-hidden">
+      <section className="py-16 sm:py-20 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&h=400&fit=crop')] bg-cover bg-center opacity-10"></div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
           <div className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 break-words">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-blue-100 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            <p className="text-blue-100 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
               Let's discuss how TIZAK Software Solutions can help you achieve your technology goals.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="group px-10 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl text-lg flex items-center gap-2">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+              <Link to="/contact" className="group px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base md:text-lg flex items-center gap-2">
                 <span>Start a Project</span>
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
-              <Link to="/about" className="px-10 py-4 border-2 border-white/40 text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-lg">
+              <Link to="/about" className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 border-2 border-white/40 text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-sm sm:text-base md:text-lg">
                 Learn More About Us
               </Link>
             </div>
@@ -968,6 +891,19 @@ export default function Home() {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
+        @keyframes blob {
+          0%, 100% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -20px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes spin-reverse-slow {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
+        }
         .animate-fade-in {
           animation: fade-in 1s ease-out;
         }
@@ -977,8 +913,14 @@ export default function Home() {
         .animate-marquee {
           animation: marquee 20s linear infinite;
         }
-        .animate-bounce-slow {
-          animation: bounce 2s infinite;
+        .animate-blob {
+          animation: blob 7s ease-in-out infinite;
+        }
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+        .animate-spin-reverse-slow {
+          animation: spin-reverse-slow 25s linear infinite;
         }
         .animation-delay-200 {
           animation-delay: 0.2s;
@@ -992,13 +934,31 @@ export default function Home() {
           animation-delay: 0.4s;
           opacity: 0;
         }
-        .delay-1000 {
-          animation-delay: 1s;
+        .animation-delay-2000 {
+          animation-delay: 2s;
         }
-        .delay-500 {
-          animation-delay: 0.5s;
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .line-clamp-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        @media (max-width: 640px) {
+          .break-words {
+            word-break: break-word;
+            overflow-wrap: break-word;
+          }
         }
       `}</style>
-    </>
+    </div>
   );
 }
