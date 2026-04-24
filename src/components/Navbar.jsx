@@ -7,6 +7,9 @@ const links = [
   { label: 'Services', path: '/services' },
   { label: 'Projects', path: '/projects' },
   { label: 'Blog', path: '/blog' },
+  { label: 'FAQ', path: '/faq' }
+
+  
 ]
 
 export default function Navbar() {
