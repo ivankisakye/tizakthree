@@ -28,10 +28,10 @@ export default function About() {
   ];
 
   const team = [
-    { name: 'John Muwanga', role: 'CEO & Founder', image: 'https://randomuser.me/api/portraits/men/32.jpg', bio: '15+ years in software development and tech leadership.' },
-    { name: 'Sarah Namutebi', role: 'CTO', image: 'https://randomuser.me/api/portraits/women/68.jpg', bio: 'Expert in cloud architecture and scalable systems.' },
-    { name: 'Michael Okello', role: 'Lead Developer', image: 'https://randomuser.me/api/portraits/men/45.jpg', bio: 'Full-stack developer with passion for clean code.' },
-    { name: 'Grace Nambi', role: 'Project Manager', image: 'https://randomuser.me/api/portraits/women/23.jpg', bio: 'Certified PMP ensuring timely delivery.' },
+    { name: 'John Muwanga', role: 'CEO & Founder', image: '/images/prof_lady.jpg', bio: '15+ years in software development and tech leadership.' },
+    { name: 'Sarah Namutebi', role: 'CTO', image: '/images/prof_lady.jpg', bio: 'Expert in cloud architecture and scalable systems.' },
+    { name: 'Michael Okello', role: 'Lead Developer', image: '/images/prof_lady.jpg', bio: 'Full-stack developer with passion for clean code.' },
+    { name: 'Grace Nambi', role: 'Project Manager', image: '/images/prof_lady.jpg', bio: 'Certified PMP ensuring timely delivery.' },
   ];
 
   const milestones = [
