@@ -53,25 +53,28 @@ export default function Navbar() {
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 relative z-20">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-              <div className="flex flex-col">
+
+              <img
+                src="/logo1.png"
+                alt="Logo"
+                className="w-14 h-12 object-contain"
+              />
+
+              <div className="flex flex-col leading-tight">
                 <span
-                  className={`font-bold text-2xl tracking-tight transition-colors duration-300 ${
-                    scrolled ? 'text-gray-900' : 'text-white'
-                  }`}
-                >
-                  TIZAK
-                </span>
-                <span
-                  className={`text-[10px] tracking-wider transition-colors duration-300 ${
+                  className={`text-[11px] tracking-[0.25em] font-semibold uppercase transition-colors duration-300 ${
                     scrolled ? 'text-gray-500' : 'text-blue-100'
                   }`}
                 >
-                  SOFTWARE SOLUTIONS
+                  SOFTWARE
+                </span>
+
+                <span
+                  className={`text-[9px] tracking-[0.35em] font-light uppercase transition-colors duration-300 ${
+                    scrolled ? 'text-gray-400' : 'text-blue-200'
+                  }`}
+                >
+                  SOLUTIONS
                 </span>
               </div>
             </Link>
