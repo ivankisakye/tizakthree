@@ -90,16 +90,16 @@ const projects = [
 ];
 
 const teamMembers = [
-  { name: 'John Muwangaazi', role: 'CEO & Founder', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'John Muwangaazi', role: 'CEO & Founder', image: '/images/gt2pass.jpg', social: { linkedin: '#', twitter: '#' } },
   { name: 'Sarah Namutebi', role: 'CTO', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
-  { name: 'Michael Okello', role: 'Lead Developer', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
-  { name: 'Grace Nambi', role: 'Project Manager', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Mohammad Zulqif', role: 'Lead Developer', image: '/images/zulpass1.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Grace Nambi', role: 'Project Manager', image: '/images/gbpass.jpg', social: { linkedin: '#', twitter: '#' } },
 ];
 
 const testimonials = [
-  { name: 'James Mubiru', role: 'CEO, Prime Properties', text: 'TIZAK transformed our rental management with their amazing system. Our operations are now 10x more efficient!', rating: 5, image: 'https://randomuser.me/api/portraits/men/1.jpg' },
-  { name: 'Alice Nankya', role: 'Director, GreenFarm', text: 'The smart irrigation system has revolutionized our farming. Water usage reduced by 40% while crop yield increased!', rating: 5, image: 'https://randomuser.me/api/portraits/women/2.jpg' },
-  { name: 'Robert Ssekandi', role: 'COO, EduTech Uganda', text: 'Their school management system is incredible. We\'ve saved countless hours on administrative tasks.', rating: 5, image: 'https://randomuser.me/api/portraits/men/3.jpg' },
+  { name: 'James Mubiru', role: 'CEO, Prime Properties', text: 'TIZAK transformed our rental management with their amazing system. Our operations are now 10x more efficient!', rating: 5, image: '/images/ldpass.jpg' },
+  { name: 'Alice Nankya', role: 'Director, GreenFarm', text: 'The smart irrigation system has revolutionized our farming. Water usage reduced by 40% while crop yield increased!', rating: 5, image: '/images/prof_lady.jpg' },
+  { name: 'Robert Ssekandi', role: 'COO, EduTech Uganda', text: 'Their school management system is incredible. We\'ve saved countless hours on administrative tasks.', rating: 5, image: '/images/ldpass.jpg' },
 ];
 
 const blogPosts = [
@@ -297,6 +297,8 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">
+
+
       {/* ========== HERO SECTION with Particles & Tech Background ========== */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Tech Image */}
@@ -312,11 +314,6 @@ export default function Home() {
         
         <ParticleField />
         
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-500"></div>
-        <div className="absolute top-40 right-1/4 w-64 h-64 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-700"></div>
-        
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
@@ -325,7 +322,6 @@ export default function Home() {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6 animate-fade-in">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
                 <span className="text-white/90 text-xs sm:text-sm font-medium tracking-wide">Reliable IT. Real-Time Results.</span>
@@ -388,10 +384,6 @@ export default function Home() {
             {/* Right Side - Image with Wobbly/Blob Shapes (Hidden on mobile) */}
             <div className="hidden lg:block relative animate-fade-in-up animation-delay-300">
               <div className="relative flex items-center justify-center">
-                <div className="absolute w-[500px] h-[500px] bg-blue-500/20 rounded-full filter blur-3xl animate-blob"></div>
-                <div className="absolute w-[400px] h-[400px] bg-purple-500/20 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
-                <div className="absolute w-[300px] h-[300px] bg-cyan-500/20 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
-                
                 <svg className="absolute w-[520px] h-[520px] -z-10 animate-spin-slow" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
                   <path d="M250 30 C350 30 450 100 470 220 C490 340 420 450 310 470 C200 490 80 450 40 340 C0 230 50 100 150 50 C200 20 230 30 250 30Z" fill="none" stroke="url(#gradientBlob)" strokeWidth="3" className="opacity-60"/>
                   <defs>
@@ -413,20 +405,15 @@ export default function Home() {
                   </defs>
                 </svg>
                 
-
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105 z-10 h-[500px]">
                   <img
                     src="/images/hm1.jpg"
                     alt="IT Team working together"
                     className="w-full h-full object-cover"
                   />
-
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
                   <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
                 </div>
-
-
-
               </div>
             </div>
           </div>
@@ -614,8 +601,8 @@ export default function Home() {
               <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md">
                 <img src="/images/dash.jpg" alt="Digital Transformation Suite" className="w-full h-48 object-cover" />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Digital Transformation Suite</h3>
-                  <p className="text-gray-600 text-sm mb-4">Complete digital transformation toolkit for modern enterprises.</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Booking System</h3>
+                  <p className="text-gray-600 text-sm mb-4">Complete digital transformation allowing customers to book any service</p>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Digital</span>
                     <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Enterprise</span>
@@ -638,7 +625,26 @@ export default function Home() {
 
       {/* ========== WHY CHOOSE US SECTION ========== */}
       <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-blue-900 to-indigo-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&h=800&fit=crop')] bg-cover bg-center opacity-10"></div>
+        {/* Clean dot pattern background - like an aerial/camera shot texture */}
+        <div className="absolute inset-0 opacity-20" 
+            style={{ 
+              backgroundImage: 'radial-gradient(circle, white 1.5px, transparent 1.5px)',
+              backgroundSize: '30px 30px'
+            }}>
+        </div>
+        
+        {/* Subtle wave/contour lines overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 200 Q200 150 400 200 T800 180 T1200 220" stroke="white" strokeWidth="1" fill="none"/>
+            <path d="M0 300 Q200 250 400 300 T800 280 T1200 320" stroke="white" strokeWidth="1" fill="none"/>
+            <path d="M0 400 Q200 350 400 400 T800 380 T1200 420" stroke="white" strokeWidth="1" fill="none"/>
+            <path d="M0 500 Q200 450 400 500 T800 480 T1200 520" stroke="white" strokeWidth="1" fill="none"/>
+            <path d="M0 100 Q200 50 400 100 T800 80 T1200 120" stroke="white" strokeWidth="0.5" fill="none" opacity="0.5"/>
+            <path d="M0 600 Q200 550 400 600 T800 580 T1200 620" stroke="white" strokeWidth="0.5" fill="none" opacity="0.5"/>
+          </svg>
+        </div>
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
             <span className="text-blue-300 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-white/10 px-3 sm:px-4 py-1.5 rounded-full">Why Choose Us</span>
@@ -699,7 +705,11 @@ export default function Home() {
             {teamMembers.map((member, index) => (
               <div key={member.name} className="text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 100}ms` }}>
                 <div className="rounded-2xl overflow-hidden mb-4 shadow-lg">
-                  <img src={member.image} alt={member.name} className="w-full h-56 sm:h-64 object-cover" />
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full aspect-[4/3] sm:aspect-square object-cover object-center"
+                  />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900">{member.name}</h3>
                 <p className="text-blue-600 mb-3 text-sm sm:text-base">{member.role}</p>
