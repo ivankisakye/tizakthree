@@ -12,7 +12,7 @@ const posts = [
     readTime: '5 min read',
     image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop',
     author: 'John Muwanga',
-    authorAvatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+    authorAvatar: '/images/sds1.jpg',
     featured: true,
   },
   { 
@@ -60,7 +60,7 @@ const posts = [
     readTime: '7 min read',
     image: 'https://images.unsplash.com/photo-1522547902296-6699d56c7c0d?w=800&h=500&fit=crop',
     author: 'John Muwanga',
-    authorAvatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+    authorAvatar: '/images/sds1.jpg',
     featured: false,
   },
   { 

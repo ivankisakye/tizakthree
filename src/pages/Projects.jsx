@@ -257,7 +257,7 @@ export default function Projects() {
             {/* Case Study 1 */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
               <img 
-                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop" 
+                src="/images/rnt.jpg" 
                 alt="Rental Housing System" 
                 className="w-full h-56 object-cover"
               />
@@ -287,7 +287,7 @@ export default function Projects() {
             {/* Case Study 2 */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
               <img 
-                src="https://images.unsplash.com/photo-1522547902296-6699d56c7c0d?w=800&h=400&fit=crop" 
+                src="/images/vot.jpg" 
                 alt="Online Voting Platform" 
                 className="w-full h-56 object-cover"
               />

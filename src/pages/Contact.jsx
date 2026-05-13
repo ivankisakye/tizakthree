@@ -45,8 +45,8 @@ export default function Contact() {
 
   const contactInfo = [
     { icon: '📧', label: 'Email', value: 'info@tizaksoftware.com', link: 'mailto:info@tizaksoftware.com' },
-    { icon: '📞', label: 'Phone', value: '+256 700 000 000', link: 'tel:+256700000000' },
-    { icon: '📍', label: 'Location', value: 'Kampala, Uganda', link: null },
+    { icon: '📞', label: 'Phone', value: '+256 772 168 241', link: 'tel:+256772168241' },
+    { icon: '📍', label: 'Location', value: 'Chain Of liberty | Spn : CB40 Kampala, Uganda', link: null },
     { icon: '⏰', label: 'Hours', value: 'Mon – Fri, 8:00am – 6:00pm EAT', link: null },
   ];
 
@@ -177,7 +177,7 @@ export default function Contact() {
                           type="text"
                           value={form.name}
                           onChange={e => setForm({ ...form, name: e.target.value })}
-                          placeholder="John Doe"
+                          placeholder="Newton"
                           className={`w-full px-4 py-3 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all
                             ${errors.name ? 'border-red-400 bg-red-50' : 'border-gray-200 focus:border-blue-500'}`}
                         />
@@ -190,7 +190,7 @@ export default function Contact() {
                           type="email"
                           value={form.email}
                           onChange={e => setForm({ ...form, email: e.target.value })}
-                          placeholder="you@example.com"
+                          placeholder="neuton@gmail.com"
                           className={`w-full px-4 py-3 border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all
                             ${errors.email ? 'border-red-400 bg-red-50' : 'border-gray-200 focus:border-blue-500'}`}
                         />
