@@ -28,11 +28,11 @@ export default function About() {
   ];
 
   const team = [
-    { name: 'John Muwanga', role: 'CEO & Founder', image: '/images/prof_lady.jpg', bio: '15+ years in software development and tech leadership.' },
-    { name: 'Sarah Namutebi', role: 'CTO', image: '/images/prof_lady.jpg', bio: 'Expert in cloud architecture and scalable systems.' },
-    { name: 'Michael Okello', role: 'Lead Developer', image: '/images/prof_lady.jpg', bio: 'Full-stack developer with passion for clean code.' },
-    { name: 'Grace Nambi', role: 'Project Manager', image: '/images/prof_lady.jpg', bio: 'Certified PMP ensuring timely delivery.' },
-  ];
+  { name: 'Mugisha Victor', role: 'CEO & Founder', image: '/images/gt2pass.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Ella Namutebi', role: 'CTO', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Mohammad Zulqif', role: 'Lead Developer', image: '/images/moh.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Gabriel Kisakye', role: 'Project Manager', image: '/images/gab.jpg', social: { linkedin: '#', twitter: '#' } },
+];
 
   const milestones = [
     { year: '2021', title: 'Company Founded', desc: 'TIZAK Software Solutions established in Kampala, Uganda.' },
@@ -163,36 +163,51 @@ export default function About() {
       </section>
 
       {/* ========== OUR TEAM SECTION ========== */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-50 px-4 py-1.5 rounded-full inline-block mb-4">The People Behind TIZAK</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
-              Meet Our Leadership
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-              A team of dedicated professionals passionate about technology
-            </p>
-          </div>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div 
-                key={member.name} 
-                className="text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <div className="rounded-2xl overflow-hidden mb-4 shadow-lg">
-                  <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+              <span className="text-blue-600 font-semibold text-sm uppercase tracking-widest bg-blue-100 px-4 py-1.5 rounded-full inline-block mb-4">The People Behind TIZAK</span>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
+                Meet Our Leadership
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+                A team of dedicated professionals passionate about technology
+              </p>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {team.map((member, index) => (
+                <div 
+                  key={member.name} 
+                  className="text-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700"
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <div className="rounded-2xl overflow-hidden mb-4 shadow-lg">
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-full aspect-[4/3] sm:aspect-square object-cover object-center"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+                  <p className="text-blue-600 mb-3">{member.role}</p>
+                  <div className="flex justify-center gap-3">
+                    <a href="#" className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      </svg>
+                    </a>
+                    <a href="#" className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0021.683-11.777c0-.21-.005-.418-.014-.628A9.97 9.97 0 0024 4.59z"/>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                <p className="text-blue-600 mb-2">{member.role}</p>
-                <p className="text-gray-500 text-sm">{member.bio}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ========== MILESTONES / TIMELINE SECTION ========== */}
       <section className="py-24 bg-gray-50">
@@ -284,7 +299,7 @@ export default function About() {
             <div className="relative reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=500&fit=crop" 
+                  src="/images/join1.jpg" 
                   alt="Team collaboration" 
                   className="w-full h-auto"
                 />
