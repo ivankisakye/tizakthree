@@ -154,16 +154,23 @@ export default function Footer() {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-gray-800">
           
-          {/* Brand Column */}
+          {/* Brand Column - Matching Navbar logo style */}
           <div className="space-y-5">
             <Link to="/" className="inline-block">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                  </svg>
+                <img
+                  src="/logo1.png"
+                  alt="Logo"
+                  className="w-14 h-12 object-contain"
+                />
+                <div className="flex flex-col leading-tight">
+                  <span className="text-[11px] tracking-[0.25em] font-semibold uppercase text-blue-400">
+                    SOFTWARE
+                  </span>
+                  <span className="text-[9px] tracking-[0.35em] font-light uppercase text-gray-400">
+                    SOLUTIONS
+                  </span>
                 </div>
-                <span className="font-display text-2xl font-bold text-white tracking-tight">TIZAK</span>
               </div>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
@@ -256,7 +263,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <a href="tel:+256700000000" className="hover:text-blue-400 transition-colors">+256 700 000 000</a>
+                <a href="tel:+256772168241" className="hover:text-blue-400 transition-colors">+256 772 168 241</a>
               </div>
               <div className="flex items-start gap-3 text-sm text-gray-400 group">
                 <div className="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors">

@@ -90,16 +90,16 @@ const projects = [
 ];
 
 const teamMembers = [
-  { name: 'John Muwangaazi', role: 'CEO & Founder', image: '/images/gt2pass.jpg', social: { linkedin: '#', twitter: '#' } },
-  { name: 'Sarah Namutebi', role: 'CTO', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
-  { name: 'Mohammad Zulqif', role: 'Lead Developer', image: '/images/zulpass1.jpg', social: { linkedin: '#', twitter: '#' } },
-  { name: 'Grace Nambi', role: 'Project Manager', image: '/images/gbpass.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Mugisha Victor', role: 'CEO & Founder', image: '/images/gt2pass.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Ella Namutebi', role: 'CTO', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Mohammad Zulqif', role: 'Lead Developer', image: '/images/moh.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Gabriel Kisakye', role: 'Project Manager', image: '/images/gab.jpg', social: { linkedin: '#', twitter: '#' } },
 ];
 
 const testimonials = [
-  { name: 'James Mubiru', role: 'CEO, Prime Properties', text: 'TIZAK transformed our rental management with their amazing system. Our operations are now 10x more efficient!', rating: 5, image: '/images/ldpass.jpg' },
+  { name: 'Shantel Asiimwe', role: 'CEO, Prime Properties', text: 'TIZAK transformed our rental management with their amazing system. Our operations are now 10x more efficient!', rating: 5, image: '/images/ldpass.jpg' },
   { name: 'Alice Nankya', role: 'Director, GreenFarm', text: 'The smart irrigation system has revolutionized our farming. Water usage reduced by 40% while crop yield increased!', rating: 5, image: '/images/prof_lady.jpg' },
-  { name: 'Robert Ssekandi', role: 'COO, EduTech Uganda', text: 'Their school management system is incredible. We\'ve saved countless hours on administrative tasks.', rating: 5, image: '/images/ldpass.jpg' },
+  { name: 'Robert Ssekandi', role: 'COO, EduTech Uganda', text: 'Their school management system is incredible. We\'ve saved countless hours on administrative tasks.', rating: 5, image: '/images/sds1.jpg' },
 ];
 
 const blogPosts = [
@@ -108,14 +108,7 @@ const blogPosts = [
   { title: 'Why Your Business Needs a Custom POS', date: 'March 5, 2024', excerpt: 'Benefits of custom point-of-sale systems for retail businesses...', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop' },
 ];
 
-const brandLogos = [
-  'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg',
-  'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
-  'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg',
-  'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg',
-  'https://upload.wikimedia.org/wikipedia/commons/e/e8/Meta_Platforms_Inc._logo.svg',
-  'https://upload.wikimedia.org/wikipedia/commons/6/6f/Uber_Logo_2018.svg',
-];
+
 
 const counters = [
   { value: 50, suffix: '+', label: 'Projects Completed' },
@@ -768,73 +761,225 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== PRICING SECTION ========== */}
+      {/* ========== PRICING SECTION - DukaEye POS ========== */}
       <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
             <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">Pricing Plan</span>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
-              Choose Your Perfect Package
+              DukaEye POS Pricing
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
-              Flexible pricing options tailored to your business needs
+              Choose the perfect package for your retail business. Save 20% with yearly payment.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
-            {/* Basic Plan */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
-              <div className="p-6 sm:p-8 text-center border-b">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Basic Package</h3>
-                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">$35<span className="text-sm sm:text-base font-normal text-gray-500">/month</span></div>
-                <p className="text-gray-500 text-sm sm:text-base">Perfect for startups</p>
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            
+            {/* BASIC PLAN - 30,000 UGX/month */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100 border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all">
+              <div className="p-6 sm:p-8 text-center border-b bg-gray-50">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Basic</h3>
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">30,000<span className="text-sm sm:text-base font-normal text-gray-500">/month</span></div>
+                <p className="text-gray-500 text-sm">Perfect for small shops & startups</p>
+                <div className="mt-3 text-xs text-green-600 bg-green-50 inline-block px-3 py-1 rounded-full">
+                  Save 20% → 288,000/year
+                </div>
               </div>
               <div className="p-6 sm:p-8">
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Community Support</span></li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Dedicated Tech Experts</span></li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Unlimited Storage</span></li>
-                  <li className="flex items-center gap-2 opacity-50 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"/></svg><span>Custom Domains</span></li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Up to 500 products</strong> in inventory</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Basic sales recording</strong> & receipt printing</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Daily sales reports</strong> via email</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>1 user account</strong> (single device)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Email support</strong> (48hr response)</span>
+                  </li>
                 </ul>
-                <Link to="/contact" className="block w-full text-center py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all text-sm sm:text-base">Get Started</Link>
+                
+                {/* What you miss on Basic */}
+                <div className="bg-gray-50 rounded-xl p-4 mb-6">
+                  <p className="text-xs font-semibold text-gray-500 mb-2">✖ NOT INCLUDED:</p>
+                  <ul className="space-y-1.5 text-xs text-gray-400">
+                    <li className="flex items-center gap-2">• Inventory stock alerts & low stock notifications</li>
+                    <li className="flex items-center gap-2">• Multiple stores/branches management</li>
+                    <li className="flex items-center gap-2">• Customer database & loyalty program</li>
+                    <li className="flex items-center gap-2">• Advanced analytics & profit reports</li>
+                    <li className="flex items-center gap-2">• Phone/WhatsApp priority support</li>
+                  </ul>
+                </div>
+                
+                <Link to="/contact" className="block w-full text-center py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all text-sm sm:text-base">
+                  Start Basic
+                </Link>
+                <p className="text-center text-xs text-gray-400 mt-3">No setup fee. Cancel anytime.</p>
               </div>
             </div>
             
-            {/* Standard Plan - Featured */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform scale-100 md:scale-105 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 border-2 border-blue-600">
-              <div className="bg-blue-600 text-white text-center py-2 text-xs sm:text-sm font-semibold">MOST POPULAR</div>
-              <div className="p-6 sm:p-8 text-center border-b">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Standard Package</h3>
-                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">$55<span className="text-sm sm:text-base font-normal text-gray-500">/month</span></div>
-                <p className="text-gray-500 text-sm sm:text-base">Best for growing businesses</p>
+            {/* STANDARD PLAN - 50,000 UGX/month - MOST POPULAR */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform scale-100 md:scale-105 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 border-2 border-blue-600 relative">
+              <div className="bg-blue-600 text-white text-center py-2 text-xs sm:text-sm font-semibold">🔥 MOST POPULAR</div>
+              <div className="p-6 sm:p-8 text-center border-b bg-gradient-to-b from-white to-blue-50">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Standard</h3>
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">50,000<span className="text-sm sm:text-base font-normal text-gray-500">/month</span></div>
+                <p className="text-gray-500 text-sm">Best for growing retail businesses</p>
+                <div className="mt-3 text-xs text-green-600 bg-green-50 inline-block px-3 py-1 rounded-full">
+                  Save 20% → 480,000/year
+                </div>
               </div>
               <div className="p-6 sm:p-8">
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Priority Support</span></li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Dedicated Account Manager</span></li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Unlimited Storage</span></li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Custom Domains</span></li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Unlimited products</strong> in inventory</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Automated stock alerts</strong> & low stock notifications</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Customer database</strong> & purchase history</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Up to 3 user accounts</strong> (multiple devices)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Advanced analytics</strong> (profit margins, best sellers)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Phone & WhatsApp support</strong> (24hr response)</span>
+                  </li>
                 </ul>
-                <Link to="/contact" className="block w-full text-center py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-md text-sm sm:text-base">Get Started</Link>
+                
+                {/* What you miss on Standard */}
+                <div className="bg-gray-50 rounded-xl p-4 mb-6">
+                  <p className="text-xs font-semibold text-gray-500 mb-2">✖ NOT INCLUDED:</p>
+                  <ul className="space-y-1.5 text-xs text-gray-400">
+                    <li className="flex items-center gap-2">• Multiple branches/stores management</li>
+                    <li className="flex items-center gap-2">• Loyalty points & rewards program</li>
+                    <li className="flex items-center gap-2">• Supplier purchase orders management</li>
+                    <li className="flex items-center gap-2">• Real-time dashboard & custom reports</li>
+                    <li className="flex items-center gap-2">• Dedicated account manager</li>
+                  </ul>
+                </div>
+                
+                <Link to="/contact" className="block w-full text-center py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-md text-sm sm:text-base">
+                  Start Standard
+                </Link>
+                <p className="text-center text-xs text-gray-400 mt-3">No setup fee. Cancel anytime.</p>
               </div>
             </div>
             
-            {/* Premium Plan */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300">
-              <div className="p-6 sm:p-8 text-center border-b">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Premium Package</h3>
-                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">$99<span className="text-sm sm:text-base font-normal text-gray-500">/year</span></div>
-                <p className="text-gray-500 text-sm sm:text-base">For enterprises</p>
+            {/* PREMIUM PLAN - 100,000 UGX/month */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300 border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all">
+              <div className="p-6 sm:p-8 text-center border-b bg-gray-50">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Premium</h3>
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">100,000<span className="text-sm sm:text-base font-normal text-gray-500">/month</span></div>
+                <p className="text-gray-500 text-sm">For enterprises & multi-store chains</p>
+                <div className="mt-3 text-xs text-green-600 bg-green-50 inline-block px-3 py-1 rounded-full">
+                  Save 20% → 960,000/year
+                </div>
               </div>
               <div className="p-6 sm:p-8">
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>24/7 Premium Support</span></li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Enterprise Security</span></li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>Custom Development</span></li>
-                  <li className="flex items-center gap-2 text-sm sm:text-base"><svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg><span>SLA Guarantee</span></li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Unlimited products & categories</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Multi-store/branch management</strong> (unlimited locations)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Loyalty points & rewards program</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Supplier & purchase order management</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Unlimited user accounts</strong> + role-based permissions</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Real-time dashboard & custom reports</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    <span><strong>Priority 24/7 support + dedicated account manager</strong></span>
+                  </li>
                 </ul>
-                <Link to="/contact" className="block w-full text-center py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all text-sm sm:text-base">Get Started</Link>
+                
+                <Link to="/contact" className="block w-full text-center py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all text-sm sm:text-base">
+                  Start Premium
+                </Link>
+                <p className="text-center text-xs text-gray-400 mt-3">No setup fee. Cancel anytime.</p>
               </div>
+            </div>
+          </div>
+          
+          {/* Yearly discount note */}
+          <div className="text-center mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <div className="inline-block bg-green-50 border border-green-200 rounded-xl px-6 py-4">
+              <p className="text-sm text-green-700">
+                💰 <strong>Save 20%</strong> when you pay annually! 
+                Basic: 288,000/year | Standard: 480,000/year | Premium: 960,000/year
+              </p>
             </div>
           </div>
         </div>
@@ -880,6 +1025,8 @@ export default function Home() {
       </section>
 
       {/* ========== BLOG SECTION ========== */}
+
+      {/*
       <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
@@ -913,18 +1060,62 @@ export default function Home() {
         </div>
       </section>
 
+                    */}
+
+
       {/* ========== BRANDS / PARTNERS SECTION ========== */}
-      <section className="py-12 sm:py-16 bg-white border-y border-gray-100">
+      <section className="py-12 sm:py-16 bg-white border-y border-gray-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
             <h2 className="font-display text-xl sm:text-2xl font-semibold text-gray-400">Trusted by Industry Leaders</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 items-center justify-items-center reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
-            {brandLogos.map((logo, index) => (
-              <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-            ))}
+        </div>
+        
+        {/* Sliding Marquee */}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-slide-slow gap-12 sm:gap-16 md:gap-20 whitespace-nowrap py-4">
+            {/* First set of logos - 8 logos */}
+            <div className="flex items-center gap-12 sm:gap-16 md:gap-20">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Meta_Platforms_Inc._logo.svg" alt="Meta" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Uber_Logo_2018.svg" alt="Uber" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter_logo_2012.svg" alt="Twitter" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+            </div>
+            
+            {/* Duplicate set for seamless loop */}
+            <div className="flex items-center gap-12 sm:gap-16 md:gap-20">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Meta_Platforms_Inc._logo.svg" alt="Meta" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Uber_Logo_2018.svg" alt="Uber" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter_logo_2012.svg" alt="Twitter" className="h-6 sm:h-8 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+            </div>
           </div>
         </div>
+        
+        <style>{`
+          @keyframes slide-slow {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-slide-slow {
+            animation: slide-slow 30s linear infinite;
+          }
+          .animate-slide-slow:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* ========== CTA SECTION ========== */}
