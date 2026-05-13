@@ -90,7 +90,7 @@ const projects = [
 ];
 
 const teamMembers = [
-  { name: 'John Muwanga', role: 'CEO & Founder', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'John Muwangaazi', role: 'CEO & Founder', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
   { name: 'Sarah Namutebi', role: 'CTO', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
   { name: 'Michael Okello', role: 'Lead Developer', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
   { name: 'Grace Nambi', role: 'Project Manager', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
