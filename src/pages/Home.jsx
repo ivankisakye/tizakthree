@@ -49,42 +49,42 @@ const projects = [
     title: 'Rental Housing System', 
     description: 'A digital platform for finding and listing rental houses across Uganda.', 
     tags: ['Web App', 'Uganda', 'Real Estate'], 
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
+    image: '/images/rnt.jpg',
     category: 'Web Application'
   },
   { 
     title: 'School Management System', 
     description: 'Comprehensive system for managing students, staff, and academic records.', 
     tags: ['SaaS', 'Education', 'Dashboard'], 
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop',
+    image: '/images/dash.jpg',
     category: 'Enterprise'
   },
   { 
-    title: 'Africa Voting Platform', 
+    title: 'Africa Voting Platformd', 
     description: 'Secure online voting platform for organizations across Africa (africavoting.com).', 
     tags: ['Civic Tech', 'Security', 'Africa'], 
-    image: 'https://images.unsplash.com/photo-1522547902296-6699d56c7c0d?w=800&h=600&fit=crop',
+    image: '/images/vot.jpg',
     category: 'Platform'
   },
   { 
     title: 'Smart Irrigation System', 
     description: 'IoT-based automated irrigation system for efficient water management.', 
     tags: ['IoT', 'Agriculture', 'Smart Tech'], 
-    image: 'https://images.unsplash.com/photo-1535463731090-e34f4b509a7a?w=800&h=600&fit=crop',
+    image: '/images/dash.jpg',
     category: 'IoT Solution'
   },
   { 
     title: 'POS System', 
     description: 'Complete point-of-sale system for retail businesses with inventory management.', 
     tags: ['Retail', 'POS', 'Analytics'], 
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+    image: '/images/dash.jpg',
     category: 'Business'
   },
   { 
     title: 'Digital Transformation Suite', 
     description: 'Complete digital transformation toolkit for modern enterprises.', 
     tags: ['Digital', 'Enterprise', 'AI'], 
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
+    image: '/images/dash.jpg',
     category: 'Enterprise'
   },
 ];
@@ -413,11 +413,20 @@ export default function Home() {
                   </defs>
                 </svg>
                 
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105 z-10">
-                  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=500&fit=crop" alt="IT Team working together" className="w-full h-auto object-cover"/>
+
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105 z-10 h-[500px]">
+                  <img
+                    src="/images/hm1.jpg"
+                    alt="IT Team working together"
+                    className="w-full h-full object-cover"
+                  />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
                   <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
                 </div>
+
+
+
               </div>
             </div>
           </div>
@@ -433,7 +442,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
             <div className="relative reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
               <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=500&fit=crop" alt="About TIZAK" className="w-full h-auto"/>
+                <img src="/images/hm2.jpg" alt="About TIZAK" className="w-full h-auto"/>
               </div>
               <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-blue-600 rounded-xl shadow-xl p-4 sm:p-6 text-center">
                 <div className="text-2xl sm:text-4xl font-bold text-white">5+</div>
@@ -487,83 +496,145 @@ export default function Home() {
       </section>
 
       {/* ========== SERVICES SECTION ========== */}
-      <section className="py-16 sm:py-20 md:py-24 bg-gray-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px] opacity-30"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">What We Offer</span>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
-              Explore Our Services
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
-              We offer end-to-end technology solutions tailored to your business needs
-            </p>
+        <section className="py-16 sm:py-20 md:py-24 bg-gray-50 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px] opacity-30"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+              <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">What We Offer</span>
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
+                Explore Our Services
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
+                We offer end-to-end technology solutions tailored to your business needs
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {services.map((service, index) => (
+                <div key={service.title} className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 100}ms` }}>
+                  <ServiceCard {...service} />
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-10 sm:mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+              <Link to="/services" className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-md hover:shadow-lg text-sm sm:text-base">
+                Explore All Services
+                <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {services.map((service, index) => (
-              <div key={service.title} className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 100}ms` }}>
-                <ServiceCard {...service} />
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-10 sm:mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <Link to="/services" className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-md hover:shadow-lg text-sm sm:text-base">
-              Explore All Services
-              <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
 
       {/* ========== PROJECTS SECTION ========== */}
-      <section className="py-16 sm:py-20 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">Work Showcase</span>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
-              Featured Projects
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
-              Discover some of our successful projects that have made an impact
-            </p>
-          </div>
-          
-          {/* Project Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
-            {['all', 'web application', 'enterprise', 'platform', 'iot solution', 'business'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-full font-medium transition-all text-xs sm:text-sm ${
-                  activeTab === tab
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {tab.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-              </button>
-            ))}
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredProjects.map((project, index) => (
-              <div key={project.title} className="reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700" style={{ transitionDelay: `${index * 100}ms` }}>
-                <ProjectCard {...project} />
+        <section className="py-16 sm:py-20 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-16 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+              <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-widest bg-blue-50 px-3 sm:px-4 py-1.5 rounded-full">Work Showcase</span>
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 break-words">
+                Featured Projects
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base px-4">
+                Discover some of our successful projects that have made an impact
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {/* Project 1 */}
+              <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md">
+                <img src="/images/rnt.jpg" alt="Rental Housing System" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Rental Housing System</h3>
+                  <p className="text-gray-600 text-sm mb-4">A digital platform for finding and listing rental houses across Uganda.</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Web App</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Uganda</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Real Estate</span>
+                  </div>
+                </div>
               </div>
-            ))}
+
+              {/* Project 2 */}
+              <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md">
+                <img src="/images/dash.jpg" alt="School Management System" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">School Management System</h3>
+                  <p className="text-gray-600 text-sm mb-4">Comprehensive system for managing students, staff, and academic records.</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">SaaS</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Education</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Dashboard</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 3 */}
+              <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md">
+                <img src="/images/vot.jpg" alt="Africa Voting Platform" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Africa Voting Platform</h3>
+                  <p className="text-gray-600 text-sm mb-4">Secure online voting platform for organizations across Africa (africavoting.com).</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Civic Tech</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Security</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Africa</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 4 */}
+              <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md">
+                <img src="/images/dash.jpg" alt="Smart Irrigation System" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Smart Irrigation System</h3>
+                  <p className="text-gray-600 text-sm mb-4">IoT-based automated irrigation system for efficient water management.</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">IoT</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Agriculture</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Smart Tech</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 5 */}
+              <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md">
+                <img src="/images/pos.jpg" alt="POS System" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">POS System</h3>
+                  <p className="text-gray-600 text-sm mb-4">Complete point-of-sale system for retail businesses with inventory management.</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Retail</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">POS</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Analytics</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 6 */}
+              <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md">
+                <img src="/images/dash.jpg" alt="Digital Transformation Suite" className="w-full h-48 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Digital Transformation Suite</h3>
+                  <p className="text-gray-600 text-sm mb-4">Complete digital transformation toolkit for modern enterprises.</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Digital</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Enterprise</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">AI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-10 sm:mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+              <Link to="/projects" className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 text-sm sm:text-base">
+                View All Projects
+                <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
           </div>
-          <div className="text-center mt-10 sm:mt-12 reveal-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <Link to="/projects" className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 text-sm sm:text-base">
-              View All Projects
-              <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
 
       {/* ========== WHY CHOOSE US SECTION ========== */}
       <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-blue-900 to-indigo-900 text-white relative overflow-hidden">
