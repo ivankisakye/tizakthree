@@ -119,7 +119,7 @@ const counters = [
 
 const marqueeItems = [
   'Managed IT Services',
-  'Cloud Computing Solutions',
+  'Cloud Computing Solutions', 
   'Cybersecurity Services',
   'Data Backup and Recovery',
   'Network Infrastructure Management',
@@ -205,18 +205,28 @@ const ParticleField = () => {
 };
 
 // Marquee Slider Component
+
 const MarqueeSlider = ({ items }) => {
+  const iconMap = {
+    'Managed IT Services': 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+    'Cloud Computing Solutions': 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',
+    'Cybersecurity Services': 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z',
+    'Data Backup and Recovery': 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4',
+    'Network Infrastructure Management': 'M8 9l3 3-3 3m4 0h4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z',
+    'IT Consulting & Strategy': 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+    'Web Application Development': 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+  };
+
   return (
-    <div className="overflow-hidden bg-theme/10 py-4">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {[...items, ...items, ...items].map((item, index) => (
-          <div key={index} className="flex items-center gap-6 mx-8">
-            <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-              </svg>
-            </div>
-            <span className="text-gray-700 font-semibold text-lg whitespace-nowrap">{item}</span>
+    <div className="overflow-hidden py-3 border-y border-gray-100 group">
+      <div className="flex animate-marquee whitespace-nowrap group-hover:animation-pause" style={{ animationDuration: '45s' }}>
+        {[...items, ...items].map((item, idx) => (
+          <div key={idx} className="flex items-center gap-4 mx-10">
+            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+              <path d={iconMap[item] || iconMap['Managed IT Services']} />
+            </svg>
+            <span className="text-gray-800 font-normal text-base tracking-wide">{item}</span>
+            <div className="w-px h-5 bg-gray-300"></div>
           </div>
         ))}
       </div>
@@ -1175,6 +1185,10 @@ export default function Home() {
         @keyframes spin-reverse-slow {
           from { transform: rotate(360deg); }
           to { transform: rotate(0deg); }
+        }
+        .group:hover 
+        .animate-marquee {
+          animation-play-state: paused;
         }
         .animate-fade-in {
           animation: fade-in 1s ease-out;
