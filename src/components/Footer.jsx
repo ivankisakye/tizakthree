@@ -255,7 +255,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <a href="mailto:tizaksoftwaresolutions@gmail.com" className="hover:text-blue-400 transition-colors break-all">info@tizaksoftware.com</a>
+                <a href="mailto:tizaksoftwaresolutions@gmail.com" className="hover:text-blue-400 transition-colors break-all">tizaksoftwaresolutions@gmail.com</a>
               </div>
               <div className="flex items-start gap-3 text-sm text-gray-400 group">
                 <div className="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors">
@@ -263,7 +263,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <a href="tel:+256772168241" className="hover:text-blue-400 transition-colors">+256 772 168 241</a>
+                <a href="tel:+256705495970" className="hover:text-blue-400 transition-colors">+256 705 495 970</a>
               </div>
               <div className="flex items-start gap-3 text-sm text-gray-400 group">
                 <div className="w-9 h-9 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors">
