@@ -90,7 +90,7 @@ const projects = [
 ];
 
 const teamMembers = [
-  { name: 'Mugisha Victor', role: 'CEO & Founder', image: '/images/gt2pass.jpg', social: { linkedin: '#', twitter: '#' } },
+  { name: 'Andinda Moses', role: 'CEO & Founder', image: '/images/gt2pass.jpg', social: { linkedin: '#', twitter: '#' } },
   { name: 'Ella Namutebi', role: 'CTO', image: '/images/prof_lady.jpg', social: { linkedin: '#', twitter: '#' } },
   { name: 'Mohammad Zulqif', role: 'Lead Developer', image: '/images/moh.jpg', social: { linkedin: '#', twitter: '#' } },
   { name: 'Gabriel Kisakye', role: 'Project Manager', image: '/images/gab.jpg', social: { linkedin: '#', twitter: '#' } },
