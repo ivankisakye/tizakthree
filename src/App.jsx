@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsApp from './components/WhatsApp'
@@ -27,7 +27,6 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
-        {/* WhatsApp Button - Appears on all pages */}
         <WhatsApp />
       </div>
     </Router>
