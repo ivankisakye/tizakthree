@@ -321,6 +321,8 @@ export default function Home() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+
+
             {/* Left Content */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6 animate-fade-in">
@@ -330,15 +332,15 @@ export default function Home() {
                 <span className="text-white/90 text-xs sm:text-sm font-medium tracking-wide">Reliable IT. Real-Time Results.</span>
               </div>
               
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.2] mb-4 sm:mb-5 animate-fade-in-up break-words">
-                Comprehensive
-                <br />
-                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block">
-                  IT Solutions For A
-                </span>
-                <br />
-                Digital World
-              </h1>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.3] mb-4 animate-fade-in-up break-words">
+  Comprehensive
+  <br />
+  <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block">
+    IT Solutions For A
+  </span>
+  <br />
+  Digital World
+</h1>
               
               <p className="text-sm sm:text-base md:text-lg text-blue-100 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-6 sm:mb-8 animate-fade-in-up animation-delay-200">
                 We deliver cutting-edge technology solutions that drive business growth, 
@@ -363,6 +365,8 @@ export default function Home() {
                 </Link>
               </div>
               
+
+
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mt-10 sm:mt-12 md:mt-16 pt-6 md:pt-8 border-t border-white/10 animate-fade-in-up animation-delay-400">
                 <div className="text-center">
