@@ -538,12 +538,31 @@ export default function Home() {
               <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-500 transition-all duration-300 overflow-hidden shadow-sm hover:shadow-md">
                 <img src="/images/rnt.jpg" alt="Rental Housing System" className="w-full h-48 object-cover" />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Rental Housing System</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Pangisa App</h3>
                   <p className="text-gray-600 text-sm mb-4">A digital platform for finding and listing rental houses across Uganda.</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Web App</span>
-                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Uganda</span>
-                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Real Estate</span>
+                    <div className="flex items-center gap-2">
+  <Link
+    to="/policies"
+    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
+  >
+    Policies
+  </Link>
+
+  <Link
+    to="/terms-and-conditions"
+    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
+  >
+    T & C
+  </Link>
+
+  <Link
+    to="/faqs"
+    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
+  >
+    FAQs
+  </Link>
+</div>
                   </div>
                 </div>
               </div>
