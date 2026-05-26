@@ -9,6 +9,7 @@ import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
+import Policies from './pages/Policies'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/policies" element={<Policies />} />
           </Routes>
         </main>
         <Footer />
