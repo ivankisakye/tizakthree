@@ -542,27 +542,31 @@ export default function Home() {
                   <p className="text-gray-600 text-sm mb-4">A digital platform for finding and listing rental houses across Uganda.</p>
                   <div className="flex flex-wrap gap-2">
                     <div className="flex items-center gap-2">
-  <Link
-    to="/policies"
-    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
-  >
-    Policies
-  </Link>
 
-  <Link
-    to="/terms-and-conditions"
-    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
-  >
-    T & C
-  </Link>
 
-  <Link
-    to="/faqs"
-    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
-  >
-    FAQs
-  </Link>
-</div>
+                      <Link
+                        to="/policies"
+                        className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
+                      >
+                        Policies
+                      </Link>
+
+                      <Link
+                        to="/terms-and-conditions"
+                        className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
+                      >
+                        T & C
+                      </Link>
+
+                      <Link
+                        to="/faqs"
+                        className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
+                      >
+                        FAQs
+                      </Link>
+
+                      
+                    </div>
                   </div>
                 </div>
               </div>
