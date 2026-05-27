@@ -45,7 +45,7 @@ export default function Contact() {
 
   const contactInfo = [
     { icon: '📧', label: 'Email', value: 'info@tizaksoftware.com', link: 'mailto:info@tizaksoftware.com' },
-    { icon: '📞', label: 'Phone', value: '+256 772 168 241', link: 'tel:+256772168241' },
+    { icon: '📞', label: 'Phone', value: '+256 705 495 970', link: 'tel:+256705495970' },
     { icon: '📍', label: 'Location', value: 'Chain Of liberty | Spn : CB40 Kampala, Uganda', link: null },
     { icon: '⏰', label: 'Hours', value: 'Mon – Fri, 8:00am – 6:00pm EAT', link: null },
   ];
