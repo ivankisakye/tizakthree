@@ -10,6 +10,7 @@ import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
 import Policies from './pages/Policies'
+import Pangisa from './pages/Pangisa'
 
 export default function App() {
   return (
@@ -26,7 +27,9 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/policies" element={<Policies />} />
+            <Route path="/pangisa" element={<Pangisa />} />
           </Routes>
+
         </main>
         <Footer />
         <WhatsApp />
