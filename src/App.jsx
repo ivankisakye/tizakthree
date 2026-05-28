@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsApp from './components/WhatsApp'
@@ -15,8 +16,11 @@ import Pangisa from './pages/Pangisa'
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
+
       <div className="font-body bg-white text-gray-900 min-h-screen flex flex-col">
         <Navbar />
+
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,8 +33,8 @@ export default function App() {
             <Route path="/policies" element={<Policies />} />
             <Route path="/pangisa" element={<Pangisa />} />
           </Routes>
-
         </main>
+
         <Footer />
         <WhatsApp />
       </div>
