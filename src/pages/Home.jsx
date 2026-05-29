@@ -583,7 +583,7 @@ export default function Home() {
                         </a>
 
                         <a
-                          href="https://pangisa.tizaksoftware.com/faqs"
+                          href="https://tizaksoftware.com/faq"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-blue-100 hover:text-blue-600 transition duration-200"
